@@ -7,7 +7,7 @@ An almagamation of various open source tools to help with continuous delivery of
 Tools used
 ================
 
-Sitecoer.Ship
+Sitecore.Ship
 
 Unicorn
 
