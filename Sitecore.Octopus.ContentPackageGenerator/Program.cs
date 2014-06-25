@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sitecore.Octopus.Business.PackageGenerator;
+﻿using Sitecore.Octopus.Business.PackageGenerator;
 using Sitecore.Octopus.Business.Services;
 using Sitecore.Octopus.Business.Settings;
 
@@ -26,8 +21,11 @@ namespace Sitecore.Octopus.ContentPackageGenerator
             var targetPath = "";
 
             //Step 4. Generate content package via Diff based on the old serlization  compared to new one (Courier!)
+
             var packageGenerator = new SitecoreContentPackageGenerator(new SitecoreSerilizationDiffGenerator());
             packageGenerator.CreateContentPackage(sourcePath, targetPath);
+
+            //Step 5. Generate ItemsToPublish.json for Sitecore.Ship
         }
     }
 }
