@@ -6,6 +6,8 @@ namespace Sitecore.Octopus.ContentPackageGenerator
 {
     class Program
     {
+
+        //TODO DI!
         static void Main(string[] args)
         {
             //Step 1. Get Current Production Release Number from OD
@@ -14,9 +16,11 @@ namespace Sitecore.Octopus.ContentPackageGenerator
             octopusDeployService.FindCurrentlyDeployedProductionVersionNumber(octopusSettings.ProjectName, octopusSettings.EnvironmentName);
 
             //Step 2. Get Build Number From TC
-            var teamCityService = new TeamCityService();
+            var buildNumber = ""; //Need a stratergy for getting this as will likely change per company
+            var teamCityService = new TeamCityService(new TeamCitySettings());
 
             //Step 3. Get Serlization folder that you have stored as an artifact
+            teamCityService.DownloadSerlizationArtifact();
             var sourcePath = "";
             var targetPath = "";
 
