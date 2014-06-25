@@ -20,5 +20,21 @@ namespace Sitecore.Octopus.Business.Settings
                 return ConfigurationManager.AppSettings.Get("OctopusDeploy.ApiKey");
             }
         }
+
+        public string ProjectName
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings.Get("OctopusDeploy.ProjectName");
+            }
+        }
+
+        public string EnvironmentName
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings.Get("OctopusDeploy.EnvironmentName");
+            }
+        }
     }
 }

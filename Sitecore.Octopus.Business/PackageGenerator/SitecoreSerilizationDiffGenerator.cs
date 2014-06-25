@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Sitecore.Octopus.Business.Contracts;
 using Sitecore.Update.Configuration;
 using Sitecore.Update.Data;
 using Sitecore.Update.Interfaces;
@@ -6,17 +7,9 @@ using Sitecore.Update.Interfaces;
 namespace Sitecore.Octopus.Business.PackageGenerator
 {
     /* This is solten from sitecore Courier.  */
-    public class DiffGenerator
+    public class SitecoreSerilizationDiffGenerator : ISitecoreSerilizationDiffGenerator
     {
-        /// <summary>
-        /// Gets the diff.
-        /// </summary>
-        /// <param name="sourcePath">The source path.</param>
-        /// <param name="targetPath">The target path.</param>
-        /// <returns>
-        /// The diff.
-        /// </returns>
-        public static List<ICommand> GetDiffCommands(string sourcePath, string targetPath)
+        public List<ICommand> GetDiffCommands(string sourcePath, string targetPath)
         {
             var targetManager = Factory.Instance.GetSourceDataManager();
             var sourceManager = Factory.Instance.GetTargetDataManager();
@@ -34,17 +27,9 @@ namespace Sitecore.Octopus.Business.PackageGenerator
             return commands;
         }
 
-        /// <summary>
-        /// Generates the diff.
-        /// </summary>
-        /// <param name="sourceIterator">The source iterator.</param>
-        /// <param name="targetIterator">The target iterator.</param>
-        /// <returns>
-        /// The diff.
-        /// </returns>
-        protected static IList<ICommand> GenerateDiff(IDataIterator sourceIterator, IDataIterator targetIterator)
+        private IEnumerable<ICommand> GenerateDiff(IDataIterator sourceIterator, IDataIterator targetIterator)
         {
-            List<ICommand> commands = new List<ICommand>();
+            var commands = new List<ICommand>();
             IDataItem sourceDataItem = sourceIterator.Next();
             IDataItem targetDataItem = targetIterator.Next();
 
@@ -76,15 +61,7 @@ namespace Sitecore.Octopus.Business.PackageGenerator
             return commands;
         }
 
-        /// <summary>
-        /// Compares the specified source item.
-        /// </summary>
-        /// <param name="sourceItem">The source item.</param>
-        /// <param name="targetItem">The target item.</param>
-        /// <returns>
-        /// The int32.
-        /// </returns>
-        protected static int Compare(IDataItem sourceItem, IDataItem targetItem)
+        private int Compare(IDataItem sourceItem, IDataItem targetItem)
         {
             if (sourceItem == null && targetItem == null)
             {

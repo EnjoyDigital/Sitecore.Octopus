@@ -60,10 +60,12 @@
   <ItemGroup>
     <Compile Include="Contracts\IOctopusDeployService.cs" />
     <Compile Include="Contracts\IOctopusDeploySettings.cs" />
-    <Compile Include="PackageGenerator\DiffGenerator.cs" />
+    <Compile Include="Contracts\ISitecoreSerilizationDiffGenerator.cs" />
+    <Compile Include="PackageGenerator\SitecoreSerilizationDiffGenerator.cs" />
     <Compile Include="PackageGenerator\SitecoreContentPackageGenerator.cs" />
+    <Compile Include="Services\TeamCityService.cs" />
     <Compile Include="Settings\OctopusDeploySettings.cs" />
-    <Compile Include="Services\OcopusDeployService.cs" />
+    <Compile Include="Services\OctopusDeployService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

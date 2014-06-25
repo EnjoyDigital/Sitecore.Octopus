@@ -5,11 +5,11 @@ using Sitecore.Octopus.Business.Contracts;
 
 namespace Sitecore.Octopus.Business.Services
 {
-    public class OcopusDeployService : IOctopusDeployService
+    public class OctopusDeployService : IOctopusDeployService
     {
         private readonly IOctopusDeploySettings _octopusDeploySettings;
 
-        public OcopusDeployService(IOctopusDeploySettings octopusDeploySettings)
+        public OctopusDeployService(IOctopusDeploySettings octopusDeploySettings)
         {
             _octopusDeploySettings = octopusDeploySettings;
         }

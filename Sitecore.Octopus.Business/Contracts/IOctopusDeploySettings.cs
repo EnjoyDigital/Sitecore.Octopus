@@ -4,5 +4,7 @@ namespace Sitecore.Octopus.Business.Contracts
     {
         string SevrerUrl { get; }
         string ApiKey { get; }
+        string ProjectName { get; }
+        string EnvironmentName { get; }
     }
 }

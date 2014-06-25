@@ -48,6 +48,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.Octopus.Business\Sitecore.Octopus.Business.csproj">
+      <Project>{408DA4A4-B15B-4F13-838B-7E76BF1C96CB}</Project>
+      <Name>Sitecore.Octopus.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
