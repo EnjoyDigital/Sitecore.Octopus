@@ -20,7 +20,7 @@ namespace Sitecore.Octopus.ContentPackageGenerator
             var teamCityService = new TeamCityService(new TeamCitySettings());
 
             //Step 3. Get Serlization folder that you have stored as an artifact
-            teamCityService.DownloadSerlizationArtifact();
+            teamCityService.DownloadSerlizationArtifact(buildNumber);
             var sourcePath = "";
             var targetPath = "";
 
