@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Sitecore.Octopus.FindLatestDeployedVersion")]
+[assembly: AssemblyTitle("Sitecore.Octopus.ContentPackageGenerator")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Sitecore.Octopus.FindLatestDeployedVersion")]
+[assembly: AssemblyProduct("Sitecore.Octopus.ContentPackageGenerator")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8018f0e6-57d4-425c-8c30-64bb01a6715f")]
+[assembly: Guid("8f4bb2e0-dfd8-44f3-93c2-8e6dd5bb54a0")]
 
 // Version information for an assembly consists of the following four values:
 //

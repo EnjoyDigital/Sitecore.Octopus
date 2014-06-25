@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Octopus.ContentPackageGenerator", "Sitecore.Octopus.ContentPackageGenerator\Sitecore.Octopus.ContentPackageGenerator.csproj", "{645EC0BA-36A8-462A-B289-9D546B837DEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Octopus.Business", "Sitecore.Octopus.Business\Sitecore.Octopus.Business.csproj", "{408DA4A4-B15B-4F13-838B-7E76BF1C96CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{645EC0BA-36A8-462A-B289-9D546B837DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645EC0BA-36A8-462A-B289-9D546B837DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645EC0BA-36A8-462A-B289-9D546B837DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645EC0BA-36A8-462A-B289-9D546B837DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{408DA4A4-B15B-4F13-838B-7E76BF1C96CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{408DA4A4-B15B-4F13-838B-7E76BF1C96CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{408DA4A4-B15B-4F13-838B-7E76BF1C96CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{408DA4A4-B15B-4F13-838B-7E76BF1C96CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
