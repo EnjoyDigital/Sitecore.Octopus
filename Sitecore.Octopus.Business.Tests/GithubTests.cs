@@ -35,7 +35,7 @@ namespace Sitecore.Octopus.Business.Tests
             settings.SetupGet(x => x.OrganisationName).Returns("leethomascook");
             var service = new GitHubService(settings.Object);
 
-            service.CreateSerilizationAsset("v.0.0.1" + DateTime.Now.Ticks, "C:\\Projects\\Sitecore.Octopus\\Sitecore.Octopus.Business.Tests\\SerliazedItems\\Added"); 
+            service.CreateSerilizationAsset("v.0.0.1" + DateTime.Now.Ticks, "SerliazedItems\\Added"); 
         }
 
         [Test]
@@ -57,7 +57,7 @@ namespace Sitecore.Octopus.Business.Tests
             settings.SetupGet(x => x.RepositoryName).Returns("SampleSitecoreReposiotryForTesting");
             settings.SetupGet(x => x.OrganisationName).Returns("leethomascook");
             var service = new GitHubService(settings.Object);
-            service.CreateSerilizationAsset("v0.0.1" + tagName, "C:\\Projects\\Sitecore.Octopus\\Sitecore.Octopus.Business.Tests\\SerliazedItems\\Added");
+            service.CreateSerilizationAsset("v0.0.1" + tagName, "SerliazedItems\\Added");
         }
 
         [Test]
