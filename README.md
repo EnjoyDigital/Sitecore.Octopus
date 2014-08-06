@@ -30,7 +30,8 @@ It will generate the following 3 files.
 Psake Example:
 ------
 
-```task GenerateSitecorePackage {
+```PowerShell
+task GenerateSitecorePackage {
      exec { & "$base_dir\Sitecore.Octopus.ContentPackageGenerator\bin\Debug\Sitecore.Octopus.ContentPackageGenerator.exe" "$source" "$packageDestination" "1e5b544554a5fbbb6d793721dc45fc2eca5439c9"}
 }```
 
