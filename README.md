@@ -15,10 +15,10 @@ This program does the following:
 There is a a Console app that you can call from your favourved scripting language (PSake example provided).
 
 
-# It will generate 3 files. 
-# 1) ItemsToPublish.json ( for use with sitecore.ship )
-# 2) GeneratedContentPackage.update ( for use with sitecore.ship )
-# 3) ReleaseNotes.txt (for passing into Octopus Deploy)
+ It will generate 3 files. 
+ 1) ItemsToPublish.json ( for use with sitecore.ship )
+ 2) GeneratedContentPackage.update ( for use with sitecore.ship )
+ 3) ReleaseNotes.txt (for passing into Octopus Deploy)
 
 # Arguments are:  seralization folder, Where you want package moved to, and git commit hash of current build ( can use GetCommitHash task example)
 
