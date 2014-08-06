@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Octopus.Business",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Build Scripts", "Sample Build Scripts", "{B5C2E926-21F0-4F2E-A928-08EC3B31910E}"
 	ProjectSection(SolutionItems) = preProject
-		Sample Powershell Build Scripts\GenerateSitecoreContentPackage.ps1 = Sample Powershell Build Scripts\GenerateSitecoreContentPackage.ps1
+		Sample Powershell Build Scripts\Sitecore.Octopus.ps1 = Sample Powershell Build Scripts\Sitecore.Octopus.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{8132876F-E356-4982-A8AD-042B9760DF4B}"

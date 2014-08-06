@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Sitecore.Octopus.Business.Contracts;
 using Sitecore.Update.Configuration;
 using Sitecore.Update.Data;
@@ -6,7 +7,7 @@ using Sitecore.Update.Interfaces;
 
 namespace Sitecore.Octopus.Business.PackageGenerator
 {
-    /* This is solten from sitecore Courier.  */
+    /* This is stolen from sitecore Courier.  */
     public class SitecoreSerilizationDiffGenerator : ISitecoreSerilizationDiffGenerator
     {
         public List<ICommand> GetDiffCommands(string sourcePath, string targetPath)
@@ -63,11 +64,6 @@ namespace Sitecore.Octopus.Business.PackageGenerator
 
         private int Compare(IDataItem sourceItem, IDataItem targetItem)
         {
-            if (sourceItem == null && targetItem == null)
-            {
-                return 0;
-            }
-
             if (sourceItem == null)
             {
                 return 1;

@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sitecore.Octopus.Business.Tests</RootNamespace>
     <AssemblyName>Sitecore.Octopus.Business.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,11 +31,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1402.2112\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.Kernel, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SitecoreLibs\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Update, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SitecoreLibs\Sitecore.Update.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,11 +58,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArgumentProcessorTests.cs" />
+    <Compile Include="ArtifactMoverTests.cs" />
+    <Compile Include="BasicBuildIdToTagNameStratergyTests.cs" />
+    <Compile Include="BasicOctopusToTeamcityMappingStratergyTests.cs" />
+    <Compile Include="GithubTests.cs" />
+    <Compile Include="JiraServiceTests.cs" />
+    <Compile Include="OctopusDeployServiceTests.cs" />
+    <Compile Include="PublishableItemsGeneratorTests.cs" />
+    <Compile Include="ReleaseNoteFileCreatorTests.cs" />
+    <Compile Include="ReleaseNotesGeneratorTests.cs" />
     <Compile Include="SitecoreContentPackageGeneratorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SitecoreSerilizationDiffGeneratorTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="AppSettings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
+    <None Include="SerliazedItems\Added\Applications.item" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.Octopus.Business\Sitecore.Octopus.Business.csproj">
+      <Project>{408da4a4-b15b-4f13-838b-7e76bf1c96cb}</Project>
+      <Name>Sitecore.Octopus.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.Octopus.ContentPackageGenerator\Sitecore.Octopus.ContentPackageGenerator.csproj">
+      <Project>{645EC0BA-36A8-462A-B289-9D546B837DEB}</Project>
+      <Name>Sitecore.Octopus.ContentPackageGenerator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SerliazedItems\Deleted\" />
+    <Folder Include="SerliazedItems\EmptyTarget\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
