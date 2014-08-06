@@ -65,8 +65,11 @@ The integration tests are currently pointing at locked down Aqueduct Octopus, Gi
 You will also need to a folder to the root directory called SitecoreLibs, which should contain the folling files:
 
 1) Sitecore.Kernel.dl
+
 2) Sitecore.Logging.dll
+
 3) Sitecore.Update.dll
+
 4) Sitecore.Zip.dll
 
 It is currently built against Sitecore 7.2, but it should work against any 6.4+ version of sitecore.
