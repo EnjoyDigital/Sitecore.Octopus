@@ -4,7 +4,8 @@ Sitecore.Octopus
 An amalgamation of various open source tools to help with continuous delivery of Sitecore sites using Octopus Deploy. 
 
 
-This program does the following:
+What it does:
+------
 
 1) Generate Release notes form Resolved jira issues and github commmit's, since the last production release in octopus deploy for your project. You can then pass this txt file into Octopus Deploy for your new release. so you REALLY do know what is being deployed.
 
@@ -12,27 +13,33 @@ This program does the following:
 
 3)Generates a  ItemsToPublish.json file, which you can pass into sitecore.ship to publish the new items automatically as part of your PostDeploy.ps1 script
 
-There is a a Console app that you can call from your favourved scripting language (PSake example provided).
+What it is:
+------
+
+It is a a Console app that you can call from your favourite scripting language (PSake example provided).
+
+It will generate the following 3 files. 
+
+1) ItemsToPublish.json ( for use with sitecore.ship )
+
+2) GeneratedContentPackage.update ( for use with sitecore.ship )
+
+3) ReleaseNotes.txt (for passing into Octopus Deploy)
 
 
- It will generate 3 files. 
- 1) ItemsToPublish.json ( for use with sitecore.ship )
- 2) GeneratedContentPackage.update ( for use with sitecore.ship )
- 3) ReleaseNotes.txt (for passing into Octopus Deploy)
+Psake Example:
+------
 
-
-All this is done by calling the the following:
-
-task GenerateSitecorePackage {
+```task GenerateSitecorePackage {
      exec { & "$base_dir\Sitecore.Octopus.ContentPackageGenerator\bin\Debug\Sitecore.Octopus.ContentPackageGenerator.exe" "$source" "$packageDestination" "1e5b544554a5fbbb6d793721dc45fc2eca5439c9"}
-}
+}```
 
  Arguments are:  seralization folder, Where you want package moved to, and git commit hash of current build ( can use GetCommitHash task example)
 
 
 
 Tools used / Needed / Integrates
-================
+------
 
 Sitecore.Ship
 
@@ -45,5 +52,6 @@ Octopus Deploy
 PSake
 
 
-
+Boast
+------
 It is build using .net and has 100% code coverage! (although some tests could do with some better asserts)
