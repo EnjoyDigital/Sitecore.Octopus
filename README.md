@@ -62,5 +62,13 @@ Pull requets wil most definatley be accepted. If you do submit a PR, please make
 
 The integration tests are currently pointing at locked down Aqueduct Octopus, Git and JIRA api's..so you may need to tweak the appsettings.config file if you want to do something special.
 
+You will also need to a folder to the root directory called SitecoreLibs, which should contain the folling files:
+
+1) Sitecore.Kernel.dl
+2) Sitecore.Logging.dll
+3) Sitecore.Update.dll
+4) Sitecore.Zip.dll
+
+It is currently built against Sitecore 7.2, but it should work against any 6.4+ version of sitecore.
 
 It is build using c# / .net 4.5.1 and has 100% code coverage! (although some tests could do with some better asserts)
