@@ -40,20 +40,25 @@ task GenerateSitecorePackage {
 
 
 
-Tools used / Needed / Integrates
+Prerequrisets
 ------
 
-Sitecore.Ship
+Sitecore.Ship ( For installing and publishing content packages)
 
-Unicorn
+Unicorn ( For serializing content in the first place) 
 
-Sitecore Courier
+Octopus Deploy 
 
-Octopus Deploy
+JIRA account with API access ( You could disable this feature if not needed)
 
-PSake
+Github account with API access ( Although it is all behind an interface, so you could swap in a different provider)
 
+PSake ( Optional - build script examples are provided in Psake. )
 
-Boast
+Contributing:
 ------
-It is build using .net and has 100% code coverage! (although some tests could do with some better asserts)
+
+Pull requets wil most definatley be accepted. If you do submit a PR, please make sure you add tests proving that it works. Currently there is some hard coded paths in the unit tests ( I know), which means you need to checkout the solution to: C:\\Projects\\Sitecore.Octopus.
+
+
+It is build using c# / .net 4.5.1 and has 100% code coverage! (although some tests could do with some better asserts)
