@@ -60,5 +60,7 @@ Contributing:
 
 Pull requets wil most definatley be accepted. If you do submit a PR, please make sure you add tests proving that it works. Currently there is some hard coded paths in the unit tests ( I know), which means you need to checkout the solution to: C:\\Projects\\Sitecore.Octopus.
 
+The integration tests are currently pointing at locked down Aqueduct Octopus, Git and JIRA api's..so you may need to tweak the appsettings.config file if you want to do something special.
+
 
 It is build using c# / .net 4.5.1 and has 100% code coverage! (although some tests could do with some better asserts)
