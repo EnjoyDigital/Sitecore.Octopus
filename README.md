@@ -40,7 +40,7 @@ task GenerateSitecorePackage {
 
 
 
-Prerequrisets
+Prerequisites
 ------
 
 Sitecore.Ship ( For installing and publishing content packages)
