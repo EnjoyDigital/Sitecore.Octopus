@@ -20,7 +20,14 @@ There is a a Console app that you can call from your favourved scripting languag
  2) GeneratedContentPackage.update ( for use with sitecore.ship )
  3) ReleaseNotes.txt (for passing into Octopus Deploy)
 
-# Arguments are:  seralization folder, Where you want package moved to, and git commit hash of current build ( can use GetCommitHash task example)
+
+All this is done by calling the the following:
+
+task GenerateSitecorePackage {
+     exec { & "$base_dir\Sitecore.Octopus.ContentPackageGenerator\bin\Debug\Sitecore.Octopus.ContentPackageGenerator.exe" "$source" "$packageDestination" "1e5b544554a5fbbb6d793721dc45fc2eca5439c9"}
+}
+
+ Arguments are:  seralization folder, Where you want package moved to, and git commit hash of current build ( can use GetCommitHash task example)
 
 
 
