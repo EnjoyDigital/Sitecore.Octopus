@@ -26,6 +26,22 @@ It will generate the following 3 files.
 
 3) ReleaseNotes.txt (for passing into Octopus Deploy)
 
+How to use it:
+------
+1) Seralize your content using [Unicorn] (https://github.com/kamsar/Unicorn)
+
+2) Check your serlizaed items into source control
+
+3) As part of your CI process,  you need to create a sitecore .update package and itemsToPublish.json file containg sitecore items to deploy and publish. Generate these things by calling this (lovely) program. 
+
+4) Create a "Release" in github of your serliazation items, so that you can do a diff agaist it in future.
+
+5) Include the generated .update snf itemsToPublish.json files in your nuget package you build for octopusDeploy.
+
+6) In your Octopus PostDeploy.ps1 script, install the package using Sitecore.Ship. You can then publish the items by passing the itemsToPublish.json file into sitecore.ship as well.
+
+7) Sit back and enjoy your automated deployment process.
+
 
 Psake Example:
 ------
@@ -36,7 +52,7 @@ task GenerateSitecorePackage {
 }
 ```
 
- Arguments are:  seralization folder, Where you want package moved to, and git commit hash of current build ( can use GetCommitHash task example)
+ Arguments are:  seralization folder, Where you want package moved to, and git commit hash of current  CI build ( can use GetCommitHash task example)
 
 
 
