@@ -38,9 +38,11 @@ How to use it:
 
 5) Include the generated .update snf itemsToPublish.json files in your nuget package you build for octopusDeploy.
 
-6) In your Octopus PostDeploy.ps1 script, install the package using Sitecore.Ship. You can then publish the items by passing the itemsToPublish.json file into sitecore.ship as well.
+6) Pass the ReleaseNote.xt into Octopus when creating the release, usin the following Switch --releasenotesfile=VALUE
 
-7) Sit back and enjoy your automated deployment process.
+7) In your Octopus PostDeploy.ps1 script, install the package using Sitecore.Ship. You can then publish the items by passing the itemsToPublish.json file into sitecore.ship as well.
+
+8) Sit back and enjoy your automated deployment process.
 
 
 Psake Example:
